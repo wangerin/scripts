@@ -1,0 +1,8 @@
+#!/bin/bash
+
+echo nmap $(
+	ip -4 route | grep -v  default | grep -v 169.254. | awk '{ print $1 }'
+) $*
+nmap $(
+	ip -4 route | grep -v  default | grep -v 169.254. | awk '{ print $1 }'
+) $*
