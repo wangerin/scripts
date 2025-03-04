@@ -1,0 +1,13 @@
+#!/bin/bash
+
+CACHE=$( mktemp -d )
+
+cd $CACHE
+
+git clone $1
+
+cd $( basename $1 )
+
+bash
+
+rm -rfv $CACHE
